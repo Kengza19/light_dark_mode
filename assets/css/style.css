@@ -19,4 +19,186 @@ Youte modification de ce fichier impactera sur le rendu général
 /* ======================== Police générale ======================*/
 body {
     font-family: "Inter-Regular";
+    color: hsl(228, 12%, 44%);
+    /* height: 100vh;
+    overflow-y: hidden; */
+}
+
+/* Les titres: polices et font-size */
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Inter-Bold";
+    color: hsl(230, 17%, 14%);
+}
+
+/* *********************** PAGE CONTAINER ***************************** */
+
+.page-container {
+    padding: 0.8cm 3.8cm 0 3.8cm;
+    width: 100%;
+}
+/************** Dashboard Name */
+.onTop-elements {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.onTop-elements h1 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+.onTop-elements h5 {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.85rem;
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+    margin-right: 0px !important;
+}
+
+/************** Switch */
+.switch label .lever {
+    width: 42px !important;
+    height: 20px !important;
+    /* background-color: hsl(228, 12%, 44%) !important;  */
+}
+/************** Dashboard Elements: First row */
+.first_social_media_row {
+    margin-top: 2rem;
+}
+.fs-container, .aRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card {
+    width: 6.05cm;
+    box-shadow: none !important;
+    background-color: hsl(227, 47%, 96%) !important;
+    border-radius: 5px !important;
+    
+}
+.fs-container .card {
+    border-top: 4px solid; 
+    height: 5.2cm;
+    text-align: center;
+}
+.fs-container .card.facebook {
+    border-top-color: hsl(195, 100%, 50%);
+}
+.fs-container .card.twitter {
+    border-top-color: hsl(203, 89%, 53%);
+}
+.fs-container .card.instagram {
+    border-top: double 4px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(hsl(227, 47%, 96%), hsl(227, 47%, 96%)), radial-gradient(circle at top left, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    
+}
+
+.fs-container .card.youtube {
+    border-top-color: hsl(348, 97%, 39%);
+}
+/* Head of cards */
+.fs-container .head {
+    margin: 1.5rem;
+}
+.head p {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.fs-container .head p span {
+    font-size: 0.76rem;
+    font-weight: bold;
+    font-family: "Inter-Bold";
+    display: inline-block;
+    margin-left: 10px;
+}
+/* Body of cards */
+.fs-container .body h5 {
+    font-size: 3.2rem;
+    margin: 0;
+}
+.fs-container .body p {
+    letter-spacing: 5px;
+    font-size: 0.93rem;
+    margin: 0.2rem 0 0 0;
+}
+/* Footer of cards */
+
+.card .down, .card .up {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.card .down span, .card .up span {
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: "Inter-Bold";
+    display: inline-block;
+    margin-left: 4px;
+}
+.card .down span{
+    /* align-items:  flex-start !important; */
+    color: hsl(356, 69%, 56%);
+    
+}
+.card .up span {
+    color: hsl(163, 72%, 41%);
+}
+
+/************** Overview - Today */
+.overview {
+    
+}
+.overview h3 {
+    font-size: 1.43rem;
+    color: hsl(228, 12%, 44%);
+}
+.overview .card {
+    height: 3cm;
+    padding: 1.5rem 1.7rem 1rem 1.7rem;
+}
+.overview .card .head p {
+    justify-content: space-between;
+    margin: 0;
+}
+.overview .card .head span {
+    font-weight: bold;
+    font-family: "Inter-Bold";
+    font-size: 0.8rem;
+}
+.overview .card .body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.5rem;
+}
+.overview .card .body h5{
+    font-weight: bold;
+}
+
+/************** Attribution */
+.attribution {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.attribution a {
+    color: hsl(203, 89%, 53%);
+    font-weight: bold;
+}
+.attribution a:hover {
+    text-decoration: underline;
 }
