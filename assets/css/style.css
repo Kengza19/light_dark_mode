@@ -35,6 +35,8 @@ h1,h2,h3,h4,h5,h6 {
 .page-container {
     padding: 0.8cm 3.8cm 0 3.8cm;
     width: 100%;
+    background: linear-gradient(180deg, hsl(225, 100%, 98%) 29%, #fff 0);
+    display: inline-block;
 }
 /************** Dashboard Name */
 .onTop-elements {
@@ -55,11 +57,57 @@ h1,h2,h3,h4,h5,h6 {
     margin-right: 0px !important;
 }
 
-/************** Switch */
+/************** Switch */ 
 .switch label .lever {
-    width: 42px !important;
+    width: 41px !important;
     height: 20px !important;
-    /* background-color: hsl(228, 12%, 44%) !important;  */
+    margin: 0 0 0 9px !important;
+    /* background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important; */
+}
+.switch label input[type="checkbox"]:checked + .lever::before, .switch label input[type="checkbox"]:checked + .lever::after {
+    left: 22px !important;
+}
+.switch label .lever::after {
+    box-shadow: none !important;
+    background-color: white !important;
+}
+.switch label input[type="checkbox"]:checked + .lever::after {
+    background-color: white !important;
+}
+.switch label .lever::before, .switch label .lever::after {
+    width: 16px !important;
+    height: 16px !important;
+    top: 2px !important;
+}
+.switch label input[type="checkbox"]:checked + .lever {
+    background-color: rgba(99, 104, 126, 0.53) !important;
+}
+.switch label input[type="checkbox"]:checked + .lever:hover {
+    /* background-color: red !important; */
+    background-image: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important;
+}
+.switch label input[type="checkbox"]:not(:checked) + .lever {
+    background-image: linear-gradient(to right,hsl(146, 68%, 55%), hsl(210, 78%, 56%)) !important;
+}
+.switch label input[type="checkbox"]:not(:checked) + .lever::after {
+    background-color: hsl(228, 28%, 20%) !important;
+}
+.switch label {
+    color: hsl(228, 12%, 44%);
+    font-family: "Inter-Bold";
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.switch label .lever::before {
+    background-color: white !important;
+}
+.switch label .lever::before, .switch label .lever::after {
+    left: 2px !important;
+}
+input[type="checkbox"]:not(:disabled) ~ .lever:active::before, input[type="checkbox"]:not(:disabled).tabbed:focus ~ .lever::before {
+    -webkit-transform: scale(1) !important; 
+    transform: scale(1) !important;
+    background-color: transparent !important;
 }
 /************** Dashboard Elements: First row */
 .first_social_media_row {
@@ -67,7 +115,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .fs-container, .aRow {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -76,7 +124,11 @@ h1,h2,h3,h4,h5,h6 {
     box-shadow: none !important;
     background-color: hsl(227, 47%, 96%) !important;
     border-radius: 5px !important;
-    
+    cursor: pointer; 
+}
+
+.card:hover {
+    background-color: hsl(234, 16.7%, 88.2%) !important;
 }
 .fs-container .card {
     border-top: 4px solid; 
@@ -91,11 +143,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 .fs-container .card.instagram {
     border-top: double 4px transparent;
-    border-radius: 80px;
+    /* border-radius: 80px; */
     background-image: linear-gradient(hsl(227, 47%, 96%), hsl(227, 47%, 96%)), radial-gradient(circle at top left, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
     background-origin: border-box;
     background-clip: content-box, border-box;
     
+}
+.fs-container .card.instagram:hover {
+    background-image: linear-gradient(hsl(234, 16.7%, 88.2%),hsl(234, 16.7%, 88.2%)), radial-gradient(circle at top left, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
 }
 
 .fs-container .card.youtube {
@@ -153,9 +208,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /************** Overview - Today */
-.overview {
-    
-}
 .overview h3 {
     font-size: 1.43rem;
     color: hsl(228, 12%, 44%);
@@ -201,4 +253,87 @@ h1,h2,h3,h4,h5,h6 {
 }
 .attribution a:hover {
     text-decoration: underline;
+}
+
+/* ***************** DARK MODE ***********/
+.darkMode .page-container {
+    background: linear-gradient(180deg, hsl(232, 19%, 15%) 29%, hsl(230, 17%, 14%) 0);
+}
+.darkMode h1, .darkMode h2, .darkMode h3,.darkMode h4,.darkMode h5,.darkMode h6 {
+    color: white;
+}
+.darkMode .card {
+    background-color: hsl(228, 28%, 20%) !important;   
+}
+.darkMode .fs-container .card.instagram {
+    background-image: linear-gradient(hsl(228, 28%, 20%),hsl(228, 28%, 20%)), radial-gradient(circle at top left, hsl(37, 97%, 70%),hsl(329, 70%, 58%)) !important;
+}
+.darkMode .card:hover {
+    background-color: hsl(227.4, 28.8%, 25.4%) !important;
+}
+.darkMode .fs-container .card.instagram:hover {
+    background-image: linear-gradient(hsl(227.4, 28.8%, 25.4%),hsl(227.4, 28.8%, 25.4%)), radial-gradient(circle at top left, hsl(37, 97%, 70%),hsl(329, 70%, 58%)) !important;
+}
+.darkMode .fs-container .head p span,.darkMode .fs-container .body p, .darkMode .overview .card .head span, .darkMode .attribution span, .darkMode .onTop-elements h5, .darkMode .switch label{
+    color: hsl(228, 34%, 66%);
+}
+
+/* ***************** Responsive ***********/
+@media only screen and (max-width: 992px) {
+    .page-container {
+        padding: 0.8cm 1.7rem 0 1.7rem;
+    }
+    .overview h3 {
+        text-align: center;
+    }
+    .onTop-elements, .fs-container, .aRow {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .onTop-elements {
+        flex-flow: column;
+    }
+    .card {
+        /* width: 7.5cm; */
+        margin: 0.75rem !important;
+    }
+    .appName {
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid hsla(227.8, 34.1%, 66.1%, 0.38);
+    }
+    .switcher {
+        margin-top: 1.2rem;
+    }
+    .darkMode .page-container {
+        background: linear-gradient(180deg, hsl(232, 19%, 15%) 10%, hsl(230, 17%, 14%) 0);
+    }
+    .page-container {
+        background: linear-gradient(180deg, hsl(225, 100%, 98%) 10%, #fff 0);
+    }
+    .first_social_media_row {
+        margin-top: 3.5rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 824px) {
+    .page-container {
+        padding: 0.8cm 2.7rem 0 2.7rem;
+    }
+    .darkMode .page-container {
+        background: linear-gradient(180deg, hsl(232, 19%, 15%) 20%, hsl(230, 17%, 14%) 0);
+    }
+    .page-container {
+        background: linear-gradient(180deg, hsl(225, 100%, 98%) 20%, #fff 0);
+    }
+}
+@media only screen and (min-width: 825px) and (max-width: 992px) {
+    .page-container {
+        padding: 0.8cm 3.8rem 0 3.8rem;
+    }
+    .darkMode .page-container {
+        background: linear-gradient(180deg, hsl(232, 19%, 15%) 23%, hsl(230, 17%, 14%) 0);
+    }
+    .page-container {
+        background: linear-gradient(180deg, hsl(225, 100%, 98%) 23%, #fff 0);
+    }
 }
