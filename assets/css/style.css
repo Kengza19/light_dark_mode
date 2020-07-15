@@ -1,0 +1,22 @@
+/*! -----------------------------------------------
+@Files: Default styles
+@Author: Gwladys Kelodjou (@Kengza)
+
+Ceci est le fichier de style principal de la page
+Youte modification de ce fichier impactera sur le rendu général
+
+-------------------------------------------------- */
+/* ======================== Définitions de la police ======================*/
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("../fonts/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: "Inter-Regular";
+    src: url("../fonts/Inter-Regular.ttf");
+}
+
+/* ======================== Police générale ======================*/
+body {
+    font-family: "Inter-Regular";
+}
